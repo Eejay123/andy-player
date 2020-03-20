@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-storage.js"></script>
+        <title>Sir Jack | Home</title>
+    </head>
+    <body>
+        <!--NAVIGATION BAR-->
+        <div class="wrapper">
+            <nav>
+                <div class="logo">SIRJACK</div>
+                <ul>
+                    <li><a href="main.html">HOME</a></li>
+                    <li><a href="sirjackstore.html">PRODUCTS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    
+                    <li><div class="bs-example">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="paratext">Hi, Friend!</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item" onclick="logout();">Logout</a>
+                                <a href="#" class="dropdown-item">Another action</a>
+                            </div>
+                        </div>
+                    </div></li>
+                   
+                </ul>
+            </nav>
+        </div>
+        <!--SLIDER BAR-->
+        <div class="slider">
+            <div class="slide current">
+                <div class="content">
+                    <h1>SuperOne</h1>
+                    <p>
+                        Also available!<br>
+                        Check it out at our store: www.sirjack.com.ph/shopvapejuice
+                    </p>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Slide 2</h1>
+                        <p>
+                                Some text information here
+                        </p>
+                </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h1>Slide 3</h1>
+                        <p>
+                                    Some text information here
+                        </p>
+                </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                            <h1>Slide 4</h1>
+                            <p>
+                                        Some text information here
+                            </p>
+                    </div>
+                </div>
+                <div class="slide">
+                        <div class="content">
+                                <h1>Slide 5</h1>
+                                <p>
+                                            Some text information here
+                                </p>
+                        </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                                    <h1>Slide 6</h1>
+                                    <p>
+                                                Some text information here
+                                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                    <button id="prev"><i class="fas fa-arrow-left"></i></button>
+                    <button id="next"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+        </div>
+        <div class="shop-button">
+            <button>SHOP NOW</button>
+            <h5>Check our new drop E-liquids and Mods!</h5>
+        </div>
+
+        <div class="contact-info">
+                <section class="container content-section">
+                        <h2 class="section-header">Featured Items</h2>
+                        <div class="shop-items">
+                                <div class="shop-item">
+                                        <img class="shop-item-image" src="juice6.jpg">
+                                        <div class="shop-item-details">
+                                        <span class="shop-item-title">Mr.Smookies</span>
+                                        <span class="shop-item-price"><small><s>P200.00</s></small> P149.00</span>
+                                        <br>
+                                        <button class="btn btn-primary shop-item-button" type="button">ON SALE!</button>
+                                        </div>
+                                    </div>
+                                    <div class="shop-item">
+                                            <img class="shop-item-image" src="juice5.jpg">
+                                            <div class="shop-item-details">
+                                            <span class="shop-item-title">Double Cheesecake</span>
+                                            <span class="shop-item-price"><small><s>P200.00</s></small> P149.00</span>
+                                            <br>
+                                            <button class="btn btn-primary shop-item-button" type="button">ON SALE!</button>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="shop-item">
+                                                <img class="shop-item-image" src="juice7.jpg">
+                                                <div class="shop-item-details">
+                                                <span class="shop-item-title">Mad Jacks</span>
+                                                <span class="shop-item-price"><small><s>P200.00</s></small> P149.00</span>
+                                                <br>
+                                                <button class="btn btn-primary shop-item-button" type="button">ON SALE!</button>
+                                                </div>
+                                            </div>
+                                            
+                                
+                                        <button class="number">1</button>
+                                        </div>
+                                        </section>
+        </div>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function(user)
+        {
+        if (user) {
+          
+          var email_id = user.email;
+              var finalid = email_id.substr(0,6);
+              document.getElementById("paratext").innerHTML = "Hi!, " + finalid;
+        
+        }
+        });
+    </script>
+    </body>
+    <footer>
+        <div class="about-web">
+            <h2 class="info-footer">About Website</h2>
+            <p>E-liquid Maker & Modder. <br>
+               Critics help you spand your limits,
+               challenge yourself and persist until you win.
+            </p>
+        </div>
+        <div class="social-media">
+                <h2 class="info-footer">Social Media</h2>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i>https://www.facebook.com/sirjackeliquid/</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Facebook</a></li>
+            </ul>
+        </div>
+        <div class="services">
+                <h2 class="info-footer">Services</h2>
+            <ul>
+                <li><a href="#">E-liquids</a></li>
+                <li><a href="#">Vape Mods</a></li>
+                <li><a href="#">Merchendise</a></li>
+             
+            </ul>
+        </div>
+        <div class="questions">
+                <h2 class="info-footer">Any Questions?</h2>
+            <ul>
+                <li><i class="fas fa-phone"></i>358 B Vipra Street, Brgy. Sangandaan, Quezon City</li>
+                <li><i class="fas fa-home"></i>09152337943</li>
+                <li><i class="fas fa-envelope"></i>johnflorenceargota@gmail.com</li>
+            </ul>
+        </div>
+        <h4 class="copyright">Copyright &copy; 2019. All rights reserved | Sir Jack Vape Shop </h4>
+    </footer>
+</html>

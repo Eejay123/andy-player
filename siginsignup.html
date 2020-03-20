@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="signinsignup.css">
+        <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Mansalva|Turret+Road&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-storage.js"></script>
+        <title>Sir Jack | Home</title>
+    </head>
+    <body>
+        <h2 class = "logo">SirJack</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input id = "sgntext" type="text" placeholder="Name" />
+                    <input id = "sgnemail" type="email" placeholder="Email" />
+                    <input id = "sgnpass" type="password" placeholder="Password" />
+                    <button id="signup-btn" onclick="signUp();">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input id = "email" type="email" placeholder="Email" />
+                    <input id = "password" type="password" placeholder="Password" />
+                    <a href="#">Forgot your password?</a>
+                    <button id = "login-btn" onclick="login();">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+<script src="index.js"></script>
+<script>
+    firebase.auth().onAuthStateChanged(function(user)
+    {
+    if (user) {
+        window.location.href = "main.html";
+    }
+    });
+</script>
+<script src="signupanimation.js"></script>
+    </body>
+</html>
